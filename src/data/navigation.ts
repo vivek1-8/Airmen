@@ -1,0 +1,85 @@
+// ============================================
+// Airmen Engineers — Navigation Data
+// ============================================
+
+import { NavItem, MegaMenuCategory } from '@/types';
+
+export const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
+  {
+    title: 'Air Compressors',
+    icon: 'Wind',
+    items: [
+      { label: 'Kaeser Compressors', href: '/kaeser', description: 'German engineered screw air compressors' },
+      { label: 'AIM Compressors', href: '/aim', description: 'Reciprocating & scroll compressors' },
+    ],
+  },
+  {
+    title: 'Material Handling',
+    icon: 'Truck',
+    items: [
+      { label: 'Hyundai Forklifts', href: '/hyundai', description: 'Electric, diesel & LPG forklifts' },
+    ],
+  },
+  {
+    title: 'Compressed Air',
+    icon: 'GitBranch',
+    items: [
+      { label: 'Legris Transair', href: '/legris', description: 'Aluminium & stainless steel piping' },
+    ],
+  },
+  {
+    title: 'Smart Monitoring',
+    icon: 'Activity',
+    items: [
+      { label: 'WiseAir', href: '/wise-air', description: 'IIoT sensors & AI analytics' },
+    ],
+  },
+  {
+    title: 'Power Solutions',
+    icon: 'BatteryCharging',
+    items: [
+      { label: 'Greaves', href: '/greaves', description: 'Generator sets & smart monitoring' },
+    ],
+  },
+];
+
+export const NAV_ITEMS: NavItem[] = [
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about-us' },
+  {
+    label: 'Products',
+    href: '/products',
+    megaMenu: MEGA_MENU_CATEGORIES,
+  },
+  { label: 'Services', href: '/service' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'Customers', href: '/customer' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+];
+
+export const FOOTER_LINKS = {
+  products: [
+    { label: 'Kaeser', href: '/kaeser' },
+    { label: 'AIM', href: '/aim' },
+    { label: 'Hyundai', href: '/hyundai' },
+    { label: 'Legris Transair', href: '/legris' },
+    { label: 'WiseAir', href: '/wise-air' },
+    { label: 'Greaves', href: '/greaves' },
+  ],
+  services: [
+    { label: 'After Sales Support', href: '/service' },
+    { label: 'Preventive Maintenance', href: '/service' },
+    { label: 'AMC', href: '/service' },
+    { label: 'Spare Parts', href: '/service' },
+    { label: 'Energy Audit', href: '/service' },
+    { label: 'Compressor Rental', href: '/a-rental-compressor' },
+  ],
+  company: [
+    { label: 'About Us', href: '/about-us' },
+    { label: 'Industries', href: '/industries' },
+    { label: 'Customers', href: '/customer' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
+  ],
+};
