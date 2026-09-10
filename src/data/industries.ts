@@ -10,7 +10,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Automobile',
     slug: 'automobile',
     description: 'Compressed air solutions for automotive manufacturing — paint shops, pneumatic tools, assembly lines, and quality testing.',
-    products: ['kaeser-screw-compressors', 'kaeser-sfc-compressors', 'hyundai-diesel-forklifts', 'legris-aluminium-piping'],
+    products: ['kaeser-screw-compressors', 'kaeser-sfc-compressors', 'ep-diesel-forklifts', 'airpipe-aluminium-piping'],
     services: ['after-sales-support', 'preventive-maintenance', 'energy-audit'],
   },
   {
@@ -18,7 +18,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Japanese Industries',
     slug: 'japanese-industries',
     description: 'Specialized air compressor and material handling solutions for Japanese manufacturing companies operating in India.',
-    products: ['kaeser-screw-compressors', 'aim-oil-free-scroll', 'hyundai-electric-forklifts'],
+    products: ['kaeser-screw-compressors', 'aim-oil-free-scroll', 'ep-electric-forklifts'],
     services: ['annual-maintenance-contract', 'spare-parts'],
   },
   {
@@ -26,7 +26,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Textile',
     slug: 'textile',
     description: 'Reliable compressed air for textile manufacturing — spinning, weaving, dyeing, and finishing operations.',
-    products: ['kaeser-screw-compressors', 'kaeser-air-treatment', 'legris-aluminium-piping'],
+    products: ['kaeser-screw-compressors', 'kaeser-air-treatment', 'airpipe-aluminium-piping'],
     services: ['preventive-maintenance', 'energy-audit'],
   },
   {
@@ -42,7 +42,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Beverage',
     slug: 'beverage',
     description: 'Food-grade compressed air for beverage production, PET bottle manufacturing, and packaging.',
-    products: ['kaeser-sigma-pet', 'aim-oil-free-scroll', 'legris-stainless-piping'],
+    products: ['kaeser-sigma-pet', 'aim-oil-free-scroll', 'airpipe-stainless-piping'],
     services: ['preventive-maintenance', 'spare-parts'],
   },
   {
@@ -50,7 +50,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Cement',
     slug: 'cement',
     description: 'Heavy-duty compressed air solutions for cement manufacturing, clinker handling, and material transport.',
-    products: ['kaeser-screw-compressors', 'hyundai-diesel-forklifts'],
+    products: ['kaeser-screw-compressors', 'ep-diesel-forklifts'],
     services: ['compressor-rental', 'annual-maintenance-contract'],
   },
   {
@@ -58,7 +58,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Pharmaceutical',
     slug: 'pharmaceutical',
     description: 'Oil-free, high-purity compressed air for pharmaceutical manufacturing, cleanrooms, and packaging.',
-    products: ['aim-oil-free-reciprocating', 'aim-oil-free-scroll', 'legris-stainless-piping'],
+    products: ['aim-oil-free-reciprocating', 'aim-oil-free-scroll', 'airpipe-stainless-piping'],
     services: ['energy-audit', 'preventive-maintenance'],
   },
   {
@@ -66,7 +66,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'Electronics',
     slug: 'electronics',
     description: 'Clean, oil-free compressed air for electronics manufacturing, PCB assembly, and semiconductor applications.',
-    products: ['aim-oil-free-scroll', 'legris-stainless-piping', 'wiseair-smart-monitoring'],
+    products: ['aim-oil-free-scroll', 'airpipe-stainless-piping', 'wiseair-smart-monitoring'],
     services: ['preventive-maintenance', 'technical-support'],
   },
   {
@@ -74,7 +74,7 @@ export const INDUSTRIES: Industry[] = [
     name: 'General Manufacturing',
     slug: 'general-manufacturing',
     description: 'Comprehensive compressed air and material handling solutions for diverse manufacturing operations.',
-    products: ['kaeser-screw-compressors', 'hyundai-electric-forklifts', 'wiseair-smart-monitoring'],
+    products: ['kaeser-screw-compressors', 'ep-electric-forklifts', 'wiseair-smart-monitoring'],
     services: ['after-sales-support', 'energy-audit', 'compressor-rental'],
   },
 ];
@@ -82,3 +82,4 @@ export const INDUSTRIES: Industry[] = [
 export function getIndustryBySlug(slug: string): Industry | undefined {
   return INDUSTRIES.find((i) => i.slug === slug);
 }
+

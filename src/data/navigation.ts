@@ -17,14 +17,14 @@ export const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
     title: 'Material Handling',
     icon: 'Truck',
     items: [
-      { label: 'Hyundai Forklifts', href: '/hyundai', description: 'Electric, diesel & LPG forklifts' },
+      { label: 'EP Forklifts', href: '/ep-forklifts', description: 'Electric, diesel & warehouse equipment' },
     ],
   },
   {
     title: 'Compressed Air',
     icon: 'GitBranch',
     items: [
-      { label: 'Legris Transair', href: '/legris', description: 'Aluminium & stainless steel piping' },
+      { label: 'AIRpipe', href: '/airpipe', description: 'Aluminium & stainless steel piping' },
     ],
   },
   {
@@ -62,8 +62,8 @@ export const FOOTER_LINKS = {
   products: [
     { label: 'Kaeser', href: '/kaeser' },
     { label: 'AIM', href: '/aim' },
-    { label: 'Hyundai', href: '/hyundai' },
-    { label: 'Legris Transair', href: '/legris' },
+    { label: 'EP Forklifts', href: '/ep-forklifts' },
+    { label: 'AIRpipe', href: '/airpipe' },
     { label: 'WiseAir', href: '/wise-air' },
     { label: 'Greaves', href: '/greaves' },
   ],
@@ -83,3 +83,4 @@ export const FOOTER_LINKS = {
     { label: 'Contact', href: '/contact' },
   ],
 };
+

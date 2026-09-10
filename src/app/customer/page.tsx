@@ -46,7 +46,7 @@ export default function CustomerPage() {
             Trusted by <span className="text-gold">Leading Industries</span>
           </h1>
           <p className="text-gray-300 text-lg lg:text-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            Airmen Engineers are proud suppliers of Kaeser Compressors & Hyundai Forklifts, serving over 5,000+ customers across diverse industrial sectors.
+            Airmen Engineers are proud suppliers of Kaeser Compressors & EP Forklifts, serving over 5,000+ customers across diverse industrial sectors.
           </p>
         </Container>
       </section>

@@ -63,12 +63,12 @@ export const COMPANY_TIMELINE: TimelineEvent[] = [
   {
     year: '2008',
     title: 'Material Handling Division',
-    description: 'Expanded into material handling solutions with Hyundai Forklifts partnership.',
+    description: 'Expanded into material handling solutions with EP Forklifts partnership.',
   },
   {
     year: '2015',
     title: 'Smart Solutions',
-    description: 'Introduced WiseAir smart monitoring and Legris Transair compressed air piping solutions.',
+    description: 'Introduced WiseAir smart monitoring and AIRpipe compressed air piping solutions.',
   },
   {
     year: '2020',
@@ -91,7 +91,7 @@ export const WHY_AIRMEN: FeatureCard[] = [
   {
     icon: 'Handshake',
     title: 'Trusted Partnerships',
-    description: 'Authorized dealer for world-class brands including Kaeser, Hyundai, and AIM.',
+    description: 'Authorized dealer for world-class brands including Kaeser, EP Equipment, and AIM.',
   },
   {
     icon: 'Wrench',

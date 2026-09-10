@@ -13,7 +13,7 @@ import { PRODUCT_CATEGORIES } from '@/data/products';
 
 export const metadata: Metadata = {
   title: 'Products — Complete Range of Industrial Solutions',
-  description: 'Explore Airmen Engineers\' complete range: Kaeser screw compressors, AIM oil-free compressors, Hyundai forklifts, Legris Transair piping, WiseAir smart monitoring, and Greaves generators.',
+  description: 'Explore Airmen Engineers\' complete range: Kaeser screw compressors, AIM oil-free compressors, EP forklifts, AIRpipe piping, WiseAir smart monitoring, and Greaves generators.',
 };
 
 // Map categories to available images
@@ -59,7 +59,7 @@ export default function ProductsPage() {
       {/* Product Categories Grid */}
       <section className="section-padding">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {PRODUCT_CATEGORIES.map((category, index) => {
               const imageSrc = CATEGORY_IMAGES[category.id] || '/images/banner-1.jpg';
               const firstBrandSlug = category.brands[0]?.slug || '#';
@@ -67,30 +67,30 @@ export default function ProductsPage() {
               return (
                 <div
                   key={category.id}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl hover:border-gold/30 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up flex flex-col"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-gray-200 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up flex flex-col h-full"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="relative h-72 w-full overflow-hidden bg-gray-100">
+                  <div className="relative aspect-[4/3] sm:aspect-[3/2] w-full overflow-hidden bg-gray-100">
                     <Image
                       src={imageSrc}
                       alt={category.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   
-                  <div className="p-8 flex flex-col flex-1">
-                    <h3 className="text-2xl font-heading font-bold text-navy mb-4 group-hover:text-gold transition-colors">
+                  <div className="p-6 sm:p-8 flex flex-col flex-1">
+                    <h3 className="text-xl sm:text-2xl font-heading font-bold text-navy mb-3 group-hover:text-gold transition-colors">
                       {category.name}
                     </h3>
-                    <p className="text-gray-500 leading-relaxed mb-6 flex-1">
+                    <p className="text-sm sm:text-base text-gray-500 leading-relaxed mb-6 flex-1">
                       {category.description}
                     </p>
                     
-                    <div className="flex flex-wrap gap-2 mb-8">
+                    <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
                       {category.brands.map((brand) => (
-                        <span key={brand.id} className="text-xs bg-gray-50 text-gray-500 border border-gray-100 px-3 py-1.5 rounded-full font-medium shadow-sm">
+                        <span key={brand.id} className="text-[11px] sm:text-xs bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1.5 rounded-full font-medium shadow-sm">
                           {brand.name}
                         </span>
                       ))}
@@ -98,7 +98,7 @@ export default function ProductsPage() {
 
                     <Link
                       href={`/${firstBrandSlug}`}
-                      className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gray-50 hover:bg-gold text-navy font-semibold px-6 py-3 rounded-lg border border-gray-200 hover:border-gold transition-all duration-300 group-hover:shadow-md"
+                      className="inline-flex items-center justify-center gap-2 w-full bg-gray-50 hover:bg-gold text-navy font-semibold px-5 py-3 sm:px-6 rounded-lg border border-gray-200 hover:border-gold transition-all duration-300 group-hover:shadow-sm mt-auto text-sm sm:text-base"
                     >
                       VIEW PRODUCTS
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

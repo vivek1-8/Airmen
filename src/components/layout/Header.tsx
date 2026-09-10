@@ -48,16 +48,7 @@ export default function Header() {
         <Container>
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group" id="header-logo">
-              <div className="font-heading tracking-tight">
-                <span className="text-2xl font-black text-navy block leading-none">
-                  AIRMEN
-                </span>
-                <span className="text-[10px] font-bold text-gray-500 tracking-[0.3em] uppercase block leading-tight mt-1">
-                  Engineers
-                </span>
-              </div>
-            </Link>
+            <Link href="/" className="flex items-center gap-3 group" id="header-logo"> {/* Logo Image */} <img src="/images/main-logo.png" alt="Airmen Engineers" className="h-12 w-auto object-contain" /> {/* Existing Text */} <div className="font-heading tracking-tight"> <span className="text-2xl font-black text-navy block leading-none"> AIRMEN </span> <span className="text-[10px] font-bold text-gray-500 tracking-[0.3em] uppercase block leading-tight mt-1"> Engineers </span> </div> </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1" id="desktop-nav">

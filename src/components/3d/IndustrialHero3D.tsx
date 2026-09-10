@@ -13,7 +13,7 @@ import Scene3DWrapper from './Scene3DWrapper';
 const IMAGES = [
   { url: '/images/banner-1.jpg', title: 'Kaeser Compressors' },
   { url: '/images/banner-2.jpg', title: 'Industrial Solutions' },
-  { url: '/images/banner-3.jpg', title: 'Hyundai Forklifts' },
+  { url: '/images/banner-3.jpg', title: 'EP Forklifts' },
   { url: '/images/banner-4.jpg', title: 'Greaves Power' },
   { url: '/images/banner-5.jpg', title: 'AIM Compressors' }
 ];

@@ -12,9 +12,10 @@ import Button from '@/components/common/Button';
 const HERO_IMAGES = [
   { url: '/images/banner-1.jpg', alt: 'Kaeser Compressors' },
   { url: '/images/banner-2.jpg', alt: 'Industrial Solutions' },
-  { url: '/images/banner-3.jpg', alt: 'Hyundai Forklifts' },
+  { url: '/images/banner-3.jpg', alt: 'EP Forklifts' },
   { url: '/images/banner-4.jpg', alt: 'Greaves Power' },
   { url: '/images/banner-5.jpg', alt: 'AIM Compressors' }
+
 ];
 
 export default function Hero() {
@@ -58,9 +59,8 @@ export default function Hero() {
         {HERO_IMAGES.map((img, index) => (
           <div
             key={img.url}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+              }`}
             style={{ transitionProperty: 'opacity, transform', transitionDuration: '2s' }}
           >
             <Image
@@ -69,6 +69,7 @@ export default function Hero() {
               fill
               priority={index === 0}
               className="object-cover object-center"
+              sizes="100vw"
             />
           </div>
         ))}
@@ -86,9 +87,8 @@ export default function Hero() {
           <button
             key={index}
             onClick={() => setCurrentImage(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentImage ? 'bg-gold scale-125' : 'bg-white/50 hover:bg-white/80'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentImage ? 'bg-gold scale-125' : 'bg-white/50 hover:bg-white/80'
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

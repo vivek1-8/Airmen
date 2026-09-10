@@ -15,8 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/a-rental-compressor',
     '/kaeser',
     '/aim',
-    '/hyundai',
-    '/legris',
+    '/ep-forklifts',
+    '/airpipe',
     '/wise-air',
     '/greaves',
   ];

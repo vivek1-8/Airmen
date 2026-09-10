@@ -11,9 +11,7 @@ import { BRAND_LIST } from '@/data/products';
 
 const LOGO_MAP: Record<string, string> = {
   kaeser: '/images/logo-kaeser.png',
-  hyundai: '/images/logo-hyundai.png',
   greaves: '/images/logo-greaves.png',
-  legris: '/images/logo-legris.png',
   wiseair: '/images/logo-wiseair.png',
 };
 
