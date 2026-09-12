@@ -79,7 +79,7 @@ export default function ProductsPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
-                  
+
                   <div className="p-6 sm:p-8 flex flex-col flex-1">
                     <h3 className="text-xl sm:text-2xl font-heading font-bold text-navy mb-3 group-hover:text-gold transition-colors">
                       {category.name}
@@ -87,7 +87,7 @@ export default function ProductsPage() {
                     <p className="text-sm sm:text-base text-gray-500 leading-relaxed mb-6 flex-1">
                       {category.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
                       {category.brands.map((brand) => (
                         <span key={brand.id} className="text-[11px] sm:text-xs bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1.5 rounded-full font-medium shadow-sm">

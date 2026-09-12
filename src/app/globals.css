@@ -1,5 +1,6 @@
 /* ============================================
    Airmen Engineers — Global Design System
+   Responsive & Image-Safe Version
    ============================================ */
 
 /* ── Google Fonts ────────────────────────── */
@@ -7,7 +8,11 @@
 
 @import "tailwindcss";
 
-/* ── CSS Custom Properties ───────────────── */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+
 :root {
   /* Colors */
   --navy: #0A1628;
@@ -16,25 +21,31 @@
   --charcoal: #1E293B;
   --slate: #334155;
   --slate-light: #475569;
+
   --gray-50: #F8FAFC;
   --gray-100: #F1F5F9;
   --gray-200: #E2E8F0;
   --gray-300: #CBD5E1;
   --gray-400: #94A3B8;
+
   --white: #FFFFFF;
+
   --gold: #EAB308;
   --gold-dark: #CA8A04;
   --gold-light: #FDE047;
   --gold-50: #FEFCE8;
 
+
   /* Typography */
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
+
 
   /* Spacing */
   --section-py: 6rem;
   --section-py-mobile: 4rem;
   --container-px: 1.5rem;
+
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -42,12 +53,26 @@
   --transition-slow: 500ms ease;
   --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
+
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  --shadow-gold: 0 4px 14px rgba(245, 158, 11, 0.25);
+  --shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.05);
+
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  --shadow-gold:
+    0 4px 14px rgba(245, 158, 11, 0.25);
+
 
   /* Border Radius */
   --radius-sm: 0.375rem;
@@ -55,7 +80,8 @@
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
 
-  /* Z-Index */
+
+  /* Z Index */
   --z-header: 100;
   --z-mega-menu: 90;
   --z-mobile-menu: 95;
@@ -63,13 +89,18 @@
   --z-modal: 110;
 }
 
-/* ── Tailwind Theme Extension ────────────── */
+
+/* ============================================
+   TAILWIND THEME
+   ============================================ */
+
 @theme {
   --color-navy: #0A1628;
   --color-navy-light: #132240;
   --color-navy-medium: #1A2D4A;
   --color-charcoal: #1E293B;
   --color-slate-custom: #334155;
+
   --color-gold: #EAB308;
   --color-gold-dark: #CA8A04;
   --color-gold-light: #FDE047;
@@ -79,62 +110,122 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* ── Base Styles ─────────────────────────── */
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+
 html {
+  width: 100%;
+  max-width: 100%;
+
   scroll-behavior: smooth;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 body {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
   font-family: var(--font-body);
+
   color: var(--charcoal);
   background-color: var(--white);
+
   line-height: 1.6;
+
   overflow-x: hidden;
 }
 
-/* ── Typography ──────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
+
+/* ============================================
+   IMAGE DEFAULTS
+   ============================================ */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
   font-family: var(--font-heading);
+
   line-height: 1.1;
   letter-spacing: -0.02em;
+
   font-weight: 600;
+
+  overflow-wrap: break-word;
 }
+
 
 h1 {
   font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
   font-weight: 700;
 }
 
+
 h2 {
   font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
 }
+
 
 h3 {
   font-size: clamp(1.5rem, 2vw + 0.25rem, 2rem);
 }
 
-/* ── Selection ───────────────────────────── */
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
 ::selection {
   background-color: var(--gold);
   color: var(--navy);
 }
 
-/* ── Focus Styles ────────────────────────── */
+
+/* ============================================
+   FOCUS
+   ============================================ */
+
 :focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
+
   border-radius: var(--radius-sm);
 }
 
-/* ── Scrollbar ───────────────────────────── */
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -152,77 +243,126 @@ h3 {
   background: var(--slate);
 }
 
-/* ── Animations ──────────────────────────── */
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 
 @keyframes slideInRight {
   from {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
+
 @keyframes scaleIn {
   from {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
+
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
+
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
-  50% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+  }
 }
+
 
 @keyframes draw-line {
-  from { stroke-dashoffset: 1000; }
-  to { stroke-dashoffset: 0; }
+  from {
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-/* ── Utility Classes ─────────────────────── */
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease forwards;
 }
@@ -255,159 +395,634 @@ h3 {
   animation: pulse-gold 2s ease-in-out infinite;
 }
 
-/* ── Gradient Overlays ───────────────────── */
+
+/* ============================================
+   GRADIENTS
+   ============================================ */
+
 .gradient-navy {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  background: linear-gradient(135deg,
+      var(--navy) 0%,
+      var(--navy-light) 100%);
 }
+
 
 .gradient-dark {
-  background: linear-gradient(180deg, var(--navy) 0%, var(--charcoal) 100%);
+  background: linear-gradient(180deg,
+      var(--navy) 0%,
+      var(--charcoal) 100%);
 }
+
 
 .gradient-gold {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  background: linear-gradient(135deg,
+      var(--gold) 0%,
+      var(--gold-dark) 100%);
 }
+
 
 .gradient-overlay-dark {
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 22, 40, 0.8) 100%);
+  background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(10, 22, 40, 0.8) 100%);
 }
 
-/* ── Card Styles ─────────────────────────── */
+
+/* ============================================
+   INDUSTRIAL CARDS
+   ============================================ */
+
 .card-industrial {
   background: var(--white);
+
   border: 1px solid var(--gray-200);
+
   border-radius: var(--radius-lg);
-  transition: all var(--transition-base);
+
   overflow: hidden;
+
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
+
 
 .card-industrial:hover {
   border-color: var(--gold);
+
   box-shadow: var(--shadow-lg);
+
   transform: translateY(-4px);
 }
 
+
 .card-dark {
   background: var(--navy-light);
+
   border: 1px solid rgba(255, 255, 255, 0.08);
+
   border-radius: var(--radius-lg);
-  transition: all var(--transition-base);
+
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
+
 
 .card-dark:hover {
   border-color: rgba(245, 158, 11, 0.3);
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.05);
+
+  box-shadow:
+    0 0 30px rgba(245, 158, 11, 0.05);
 }
 
-/* ── Product Card Responsive ────────────── */
+
+/* ============================================
+   PRODUCT CARD
+   ============================================ */
+
 .product-card {
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  max-width: 100%;
+
   height: 100%;
+
+  min-width: 0;
+
   overflow: hidden;
+
+  box-sizing: border-box;
 }
+
+
+/* ============================================
+   PRODUCT IMAGE CONTAINER
+   ============================================ */
 
 .product-card-image {
   position: relative;
+
   width: 100%;
+  max-width: 100%;
+
   aspect-ratio: 4 / 3;
+
   overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   border-radius: var(--radius-lg);
+
   background: var(--gray-50);
+
   flex-shrink: 0;
+
+  box-sizing: border-box;
 }
 
+
+/*
+  IMPORTANT
+  Product image:
+  - No crop
+  - No forced stretching
+  - No zoom
+  - Original aspect ratio preserved
+*/
+
 .product-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 90% !important;
+  max-height: 90% !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  margin: auto;
+
+  transform: none !important;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
 }
+
+
+/*
+  Prevent hover zoom from other CSS/classes
+*/
+
+.product-card:hover .product-card-image img,
+.product-card-image:hover img {
+  transform: none !important;
+
+  scale: 1 !important;
+}
+
+
+/* ============================================
+   PRODUCT BODY
+   ============================================ */
 
 .product-card-body {
   display: flex;
   flex-direction: column;
+
   flex: 1;
+
+  min-width: 0;
+
+  width: 100%;
+
   padding-top: 1rem;
+
+  overflow-wrap: break-word;
 }
+
+
+/* ============================================
+   PRODUCT BUTTON
+   ============================================ */
 
 .product-card-body .btn-wrapper {
+  width: 100%;
+
   margin-top: auto;
+
   padding-top: 1rem;
 }
 
-/* ── 3D Card Tilt ────────────────────────── */
+
+/* ============================================
+   3D CARD
+   ============================================ */
+
 .card-3d {
   perspective: 1000px;
+
   transform-style: preserve-3d;
 }
+
 
 .card-3d-inner {
   transition: transform var(--transition-base);
+
   transform-style: preserve-3d;
 }
 
-/* ── Section Styles ──────────────────────── */
+
+/* ============================================
+   SECTION
+   ============================================ */
+
 .section-padding {
   padding-top: var(--section-py);
   padding-bottom: var(--section-py);
 }
 
-@media (max-width: 768px) {
-  .section-padding {
-    padding-top: var(--section-py-mobile);
-    padding-bottom: var(--section-py-mobile);
-  }
-}
 
-/* ── Overline Label ──────────────────────── */
+/* ============================================
+   OVERLINE
+   ============================================ */
+
 .overline {
   font-family: var(--font-body);
+
   font-size: 0.75rem;
+
   font-weight: 600;
+
   letter-spacing: 0.15em;
+
   text-transform: uppercase;
+
   color: var(--gold);
 }
 
-/* ── Specification Table ─────────────────── */
+
+/* ============================================
+   SPECIFICATION TABLE
+   ============================================ */
+
 .spec-table {
   width: 100%;
+
   border-collapse: collapse;
 }
+
 
 .spec-table th,
 .spec-table td {
   padding: 0.75rem 1rem;
+
   text-align: left;
+
   border-bottom: 1px solid var(--gray-200);
+
   font-size: 0.875rem;
+
+  overflow-wrap: break-word;
 }
+
 
 .spec-table th {
   font-weight: 600;
+
   color: var(--navy);
+
   background-color: var(--gray-50);
 }
+
 
 .spec-table tr:hover td {
   background-color: var(--gold-50);
 }
 
-/* ── Reduced Motion ──────────────────────── */
+
+/* ============================================
+   TABLET
+   769px → 1024px
+   ============================================ */
+
+@media (max-width: 1024px) {
+
+  :root {
+    --container-px: 1.25rem;
+  }
+
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+
+  h2 {
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+  }
+
+
+  .product-card-image {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  .product-card-image img {
+    max-width: 90% !important;
+    max-height: 90% !important;
+  }
+}
+
+
+/* ============================================
+   TABLET / SMALL LAPTOP
+   <= 768px
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  :root {
+    --section-py: 4rem;
+    --container-px: 1rem;
+  }
+
+
+  body {
+    font-size: 0.95rem;
+  }
+
+
+  /* Typography */
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+  }
+
+
+  h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+
+  h3 {
+    font-size: clamp(1.35rem, 5vw, 2rem);
+  }
+
+
+  /* Section */
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+
+  /* Industrial cards */
+
+  .card-industrial:hover {
+    transform: none;
+  }
+
+
+  /* Product image */
+
+  .product-card-image {
+    aspect-ratio: 4 / 3;
+
+    border-radius: var(--radius-md);
+  }
+
+
+  .product-card-image img {
+    max-width: 88% !important;
+    max-height: 88% !important;
+
+    transform: none !important;
+  }
+
+
+  /* Product body */
+
+  .product-card-body {
+    padding-top: 0.75rem;
+  }
+
+
+  .product-card-body .btn-wrapper {
+    padding-top: 0.75rem;
+  }
+
+
+  /* Tables */
+
+  .spec-table {
+    display: block;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+/* ============================================
+   MOBILE
+   <= 480px
+   ============================================ */
+
+@media (max-width: 480px) {
+
+  :root {
+    --section-py-mobile: 3rem;
+    --container-px: 0.875rem;
+  }
+
+
+  body {
+    font-size: 0.9rem;
+  }
+
+
+  /* Typography */
+
+  h1 {
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
+  }
+
+
+  h2 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+
+  h3 {
+    font-size: clamp(1.25rem, 6vw, 1.7rem);
+  }
+
+
+  /* Section */
+
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+
+  /* Product card */
+
+  .product-card {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+  }
+
+
+  /*
+    KEEP 4:3
+    Don't force 1:1 because it can
+    make product look unnecessarily large.
+  */
+
+  .product-card-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    border-radius: var(--radius-md);
+  }
+
+
+  /*
+    Smaller product inside image container
+    so it NEVER looks zoomed.
+  */
+
+  .product-card-image img {
+    width: auto !important;
+
+    height: auto !important;
+
+    max-width: 86% !important;
+
+    max-height: 86% !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    transform: none !important;
+
+    scale: 1 !important;
+  }
+
+
+  .product-card-body {
+    padding-top: 0.65rem;
+  }
+
+
+  .product-card-body .btn-wrapper {
+    padding-top: 0.65rem;
+  }
+
+
+  /* Table */
+
+  .spec-table th,
+  .spec-table td {
+    padding: 0.6rem 0.75rem;
+
+    font-size: 0.8rem;
+  }
+
+
+  /* Disable hover lift */
+
+  .card-industrial:hover {
+    transform: none;
+  }
+}
+
+
+/* ============================================
+   SMALL MOBILE
+   <= 360px
+   ============================================ */
+
+@media (max-width: 360px) {
+
+  :root {
+    --container-px: 0.75rem;
+  }
+
+
+  body {
+    font-size: 0.875rem;
+  }
+
+
+  .section-padding {
+    padding-top: 2.5rem;
+
+    padding-bottom: 2.5rem;
+  }
+
+
+  .product-card-image {
+    aspect-ratio: 4 / 3;
+
+    border-radius: var(--radius-sm);
+  }
+
+
+  .product-card-image img {
+    max-width: 82% !important;
+
+    max-height: 82% !important;
+
+    transform: none !important;
+
+    scale: 1 !important;
+  }
+
+
+  .product-card-body {
+    padding-top: 0.5rem;
+  }
+
+
+  .product-card-body .btn-wrapper {
+    padding-top: 0.5rem;
+  }
+}
+
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+
     animation-iteration-count: 1 !important;
+
     transition-duration: 0.01ms !important;
   }
+
 
   html {
     scroll-behavior: auto;
   }
 
+
   .animate-marquee {
     animation: none;
+  }
+
+
+  .product-card-image img {
+    transform: none !important;
+
+    scale: 1 !important;
   }
 }
