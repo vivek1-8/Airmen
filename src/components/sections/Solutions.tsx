@@ -39,7 +39,7 @@ const CATEGORY_IMAGES: Record<string, string> = {
   'air-compressors': '/images/banner-1.jpg',
   'material-handling': '/images/banner-3.jpg',
   'compressed-air-piping': '/images/banner-2.jpg',
-  'smart-monitoring': '/images/banner-2.jpg',
+  'smart-monitoring': '/images/about-1.jpg',
   'power-solutions': '/images/banner-4.jpg',
 };
 
