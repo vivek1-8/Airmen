@@ -13,7 +13,7 @@ const HERO_IMAGES = [
     alt: 'Kaeser Compressors',
   },
   {
-    url: '/images/about-2.png',
+    url: '/images/about-2.jpg',
     alt: 'Industrial Solutions',
   },
   {
@@ -212,61 +212,57 @@ export default function Hero() {
 
       <div
         className="
-          absolute
-          z-[2]
+    absolute
+    z-[2]
 
-          bottom-16
-          right-10
+    bottom-16
+    left-1/2
+    -translate-x-1/2
 
-          flex
-          gap-2
+    flex
+    items-center
+    gap-2
 
-          max-[768px]:
-          bottom-7
-          right-1/2
-          translate-x-1/2
-        "
+    max-[768px]:bottom-7
+  "
       >
-
         {HERO_IMAGES.map((_, index) => (
           <button
             key={index}
             type="button"
             onClick={() => setCurrentImage(index)}
             aria-label={`Go to slide ${index + 1}`}
-
             className={`
-              w-3
-              h-3
+        w-3
+        h-3
 
-              rounded-full
+        rounded-full
 
-              transition-all
-              duration-300
+        transition-all
+        duration-300
 
-              ${index === currentImage
+        ${index === currentImage
                 ? 'bg-gold scale-125'
                 : 'bg-white/50 hover:bg-white/80'
               }
 
-              max-[480px]:w-2.5
-              max-[480px]:h-2.5
-            `}
+        max-[480px]:w-2.5
+        max-[480px]:h-2.5
+      `}
           />
         ))}
-
       </div>
 
 
       {/* ========================================
           Scroll Indicator
           ======================================== */}
-
+      {/* 
       <div
         className="
           absolute
 
-          bottom-8
+          bottom-2
           left-1/2
           -translate-x-1/2
 
@@ -332,7 +328,7 @@ export default function Hero() {
 
         </div>
 
-      </div>
+      </div> */}
 
     </section>
   );
